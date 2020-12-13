@@ -1,1 +1,1 @@
-# python_project
+# Random password generator
