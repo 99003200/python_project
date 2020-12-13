@@ -1,8 +1,11 @@
 import string
 import random
+import re
 
 
-option = int(input("enter the option (for low=0, medium=1, strong=2): "))
+print("enter the option (for low=0, medium=1, strong=2,",
+      "veiw pattern match=3): ")
+option = int(input())
 ''' Enter option like for low level select 0,
 for medium level select 1 and
  for high level select 2 '''
@@ -91,6 +94,10 @@ def main():
         '''option 2 for high level password with lower, upper case letters,
             digits and puctuations '''
         print(p3.high_level())
+
+    elif option == 3:
+        print("\nPattern Matching for \'joseph@gmail.com' is:")
+        print(re.match("[a-z]+@[a-z]+.[a-z]+", "joseph@gmail.com"))
 
     else:
         print("Invalid option! please choose correct option")
